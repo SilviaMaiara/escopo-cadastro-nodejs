@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+	<html lang="pt-br">
+		<head>
+			<meta charset="utf-8"/>
+			<title>Formulário de cadastro de Cliente</title>
+		</head>
+	<body>
+
+		<h1>Cadastro de Cliente</h1>
+        <br />
+        
+		<form action="/cadastro/salvar" method="post">
+			<label>Nome</label>
+			<input type="text" id="nome" name="nome" value="<%=cadastro.nome%>" placeholder="Nome do cliente" />
+			<br />
+			<label>CPF</label>
+			<input type="text" id="cpf" name="cpf" value="<%=cadastro.cpf%>"  placeholder="Numero de cpf" />
+			<br />
+			<label>Endereço</label>
+			<input type="text" id="endereco" name="endereco" value="<%=cadastro.endereco%>" placeholder="Endereço" />
+			<br />
+			<label>E-mail</label>
+			<input type="text" id="email" name="email" value="<%=cadastro.email%>" placeholder="E-mail" />
+            <br />
+            <label>Número de celular</label>
+			<input type="text" id="celular" name="celular"  value="<%=cadastro.celular%>" placeholder="Número de celular" />
+			<br />
+			<input type="submit" value="Enviar" />
+        </form>
+        
+        <% if(validacao){ %>
+			<ul>
+				<% for(var i = 0; i < validacao.length; i++){ %>
+					<li>
+						<%= validacao[i].msg %>
+					</li>
+				<% } %>
+			</ul>
+		<% } %>
+
+	</body>
+</html>

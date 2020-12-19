@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+	<html lang="pt-br">
+		<head>
+			<meta charset="utf-8"/>
+			<title>Oficina Art Car</title>
+		</head>
+	<body>
+
+		<h1>Clientes</h1>
+
+		<table cellspacing ="10">
+			
+			<tr>
+				<td>ID</td>
+				<td>Nome</td>
+				<td>CPF</td>
+				<td>Endereço</td>
+				<td>E-mail</td>
+				<td>Celular</td>
+			</tr>
+
+			<% for(var i = 0; i < cadastro.length; i++){ %>
+				<tr>
+					<td><%= cadastro[i].id_cliente %></td>
+					<td><%= cadastro[i].nome %></td>
+					<td><%= cadastro[i].cpf %></td>
+					<td><%= cadastro[i].endereco %></td>
+					<td><%= cadastro[i].email %></td>
+					<td><%= cadastro[i].celular %></td>
+				</tr>
+			<% } %>
+
+		</table>
+
+		<form action="/cadastrarClientes" method="post">
+			<input type="submit" value="Cadastrar novo cliente" />
+		</form>
+
+	</body>
+</html>

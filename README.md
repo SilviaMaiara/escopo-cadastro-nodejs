@@ -1,6 +1,5 @@
-Escopo de cadastro utilizando node.js, HTML e o gerenciador de banco de dados MySQL
-
-
+Escopo de cadastro utilizando node.js e o gerenciador de banco de dados MySQL
+-
 
 A partir do npm foram instalados: 
 

@@ -1,4 +1,3 @@
-//conexao com o banco de dados mysql
 var mysql = require('mysql');
 
 var connMysql =  function(){
